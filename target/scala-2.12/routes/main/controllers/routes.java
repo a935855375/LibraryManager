@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/fan/play/Library Manager/conf/routes
-// @DATE:Thu Oct 12 19:53:51 CST 2017
+// @DATE:Wed Oct 18 20:58:08 CST 2017
 
 package controllers;
 

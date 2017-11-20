@@ -16,7 +16,7 @@
         <option name="useOurOwnAutoImport" value="true" />
       </SbtProjectSettings>
     </option>
-    <option name="maximumHeapSize" value="1024" />
-    <option name="vmParameters" value="-XX:MaxPermSize=512M" />
+    <option name="maximumHeapSize" value="2048" />
+    <option name="vmParameters" value="-XX:MaxPermSize=1024M" />
   </component>
 </project>

@@ -4,7 +4,7 @@
     <option name="serverConfigurations">
       <list>
         <ServerConfiguration>
-          <option name="label" value="Mongo" />
+          <option name="label" value="mongo" />
           <option name="serverUrls">
             <list>
               <option value="localhost:27017" />
@@ -13,7 +13,6 @@
           <option name="sshTunnelingConfiguration">
             <SshTunnelingConfiguration />
           </option>
-          <option name="userDatabase" value="library" />
         </ServerConfiguration>
       </list>
     </option>

@@ -5,7 +5,7 @@ version := "2.6.6-SNAPSHOT"
 
 scalaVersion := "2.12.4"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala).disablePlugins(PlayFilters)
 
 
 libraryDependencies += guice

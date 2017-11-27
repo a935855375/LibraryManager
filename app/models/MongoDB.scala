@@ -5,8 +5,9 @@ import javax.inject.{Inject, Singleton}
 import play.api.libs.json.{JsValue, Json}
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.play.json.collection.JSONCollection
-import reactivemongo.play.json._
 import scala.concurrent.ExecutionContext
+import reactivemongo.play.json._
+import JsonFormats._
 
 @Singleton
 class MongoDB @Inject()(reactiveMongoApi: ReactiveMongoApi)(implicit ec: ExecutionContext) {
@@ -15,7 +16,7 @@ class MongoDB @Inject()(reactiveMongoApi: ReactiveMongoApi)(implicit ec: Executi
   def userCol = reactiveMongoApi.database.map(_.collection[JSONCollection]("user"))
 
   def bookIncrement(sequenceName: String) = bookCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
-      Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
+    Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
     .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
 
   def userIncrement(sequenceName: String) = userCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
@@ -33,4 +34,8 @@ class MongoDB @Inject()(reactiveMongoApi: ReactiveMongoApi)(implicit ec: Executi
   def orderIncrement(sequenceName: String) = preOrderCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
     Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
     .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
+
+  def getABook(id: Int) = {
+    bookCol.flatMap(_.find(Json.obj("id" -> id)).requireOne[Book])
+  }
 }

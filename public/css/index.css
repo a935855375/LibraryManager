@@ -1,0 +1,29 @@
+.rank_box {
+    margin: 1em 0 2em;
+}
+.rank_left{
+    float: left;
+    width: 24%;
+}
+.rank_left-item {
+    padding-right: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.rank_right {
+    overflow: hidden;
+}
+
+.rank_left img{
+    width:65px;
+}
+
+.rank_right h4{
+    font-size:18px;
+    margin-top: 5px;
+}
+
+.rank_right p{
+    font-size: 12px;
+    color: #777;
+}

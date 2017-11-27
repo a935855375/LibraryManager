@@ -3,23 +3,51 @@ package controllers
 import javax.inject.{Inject, Singleton}
 
 import models.MongoDB
-import play.api.mvc.{MessagesAbstractController, MessagesControllerComponents}
 import play.api.libs.json._
+import play.api.mvc.{MessagesAbstractController, MessagesControllerComponents}
 import reactivemongo.play.json._
+import services.{CommonService, MailerService}
 
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class User @Inject()(cc: MessagesControllerComponents, mongoDB: MongoDB)
+class User @Inject()(cc: MessagesControllerComponents,
+                     mongoDB: MongoDB,
+                     mailer: MailerService,
+                     common: CommonService)
                     (implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
 
-  def signUp = {
+  def test = Action.async { implicit request =>
+    Future {
+      mailer.sendEmail("笨蛋", "1060238139@qq.com", views.html.mail.activeMail("笨蛋", "1234").body)
+      Ok("hello")
+    }
+  }
+
+  def index = Action.async { implicit request =>
+    Future.successful(Ok(views.html.index()))
+  }
+
+  def introduce = Action.async { implicit request =>
+    Future.successful(Ok(views.html.introduce()))
+  }
+
+  def readerService = Action.async { implicit request =>
+    Future.successful(Ok(views.html.readerService()))
+  }
+
+  def register = {
 
   }
 
-  def signIn = {
+  def doRegister = {
 
   }
+
+  def login = Action.async { implicit request =>
+    Future.successful(Ok(views.html.login()))
+  }
+
 
   def preOrder = Action.async { implicit request =>
     mongoDB.preOrderCol.flatMap(_.update(Json.obj("uid" -> 1), Json.obj("$push" -> Json.obj("book" -> Json.obj("pid" -> 1, "bid" -> 1, "time" -> System.currentTimeMillis, "outdate" -> 0)))))
@@ -33,6 +61,11 @@ class User @Inject()(cc: MessagesControllerComponents, mongoDB: MongoDB)
   def elemMatchTest = Action.async { implicit request =>
     Future.successful(Ok)
   }
+
+  def returnBook = Action.async { implicit request =>
+    Future.successful(Ok)
+  }
+
 
   def borrow = Action.async { implicit request =>
     mongoDB.bookCol.flatMap(_.find(Json.obj("id" -> 1)).requireOne[JsValue]).map(_.\("rest").as[Int]).flatMap {

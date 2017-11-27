@@ -1,0 +1,955 @@
+@()
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>图书馆首页</title>
+        <link rel="shortcut icon" href="@routes.Assets.at("images/logo.ico")"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+        <script type="application/x-javascript"> addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        } </script>
+        <link href="@routes.Assets.at("css/bootstrap-3.1.1.min.css")" rel='stylesheet' type='text/css'/>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="@routes.Assets.at("js/jquery.min.js")"></script>
+        <script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
+            <!-- Custom Theme files -->
+        <link href="@routes.Assets.at("css/index.css")" rel='stylesheet' type='text/css'/>
+        <link href="@routes.Assets.at("css/style.css")" rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="@routes.Assets.at("css/jquery.countdown.css")"/>
+
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+            <!----font-Awesome----->
+        <link href="@routes.Assets.at("css/font-awesome.css")" rel="stylesheet">
+            <!----font-Awesome----->
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <!--<a class="navbar-brand" href="index.html">JSUCCW LIBRARY</a>-->
+                    <img src="@routes.Assets.at("images/logo.png")" alt="创新创业工作室图书馆" class="img-responsive"
+                    style="height: 50px;
+                        width: 250px;
+                        margin-top: 5px">
+                </div>
+                    <!--/.navbar-header-->
+                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="@routes.User.login()"><i class="fa fa-user"></i><span>登录</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-list"></i><span>资源</span></a>
+                                <!--<ul class="dropdown-menu">
+                        <li><a href="courses.html">学习网站</a></li>
+                        <li><a href="courses.html">大一排名</a></li>
+                        <li><a href="course_detail.html">大二排名</a></li>
+                        <li><a href="course_detail.html">大三排名</a></li>
+                    </ul>-->
+                        </li>
+                            <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-calendar"></i><span>实验室事件</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="events.html">Event1</a></li>
+                        <li><a href="events.html">Event2</a></li>
+                        <li><a href="events.html">Event3</a></li>
+                    </ul>
+                </li>-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-globe"></i><span>反馈</span></a>
+                                <!--<ul class="dropdown-menu">
+                        <li><a href="#"><span><i class="flags us"></i><span>English</span></span></a></li>
+                        <li><a href="#"><span><i class="flags newzland"></i><span>Newzland</span></span></a></li>
+                    </ul>-->
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                            class="fa fa-search"></i><span>搜索</span></a>
+                            <ul class="dropdown-menu search-form">
+                                <form>
+                                    <input type="text" class="search-text" name="s" placeholder="Search...">
+                                    <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+                <!--/.navbar-collapse-->
+        </nav>
+        <nav class="navbar nav_bottom" role="navigation">
+            <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header nav_2">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
+                    data-target="#bs-megadropdown-tabs">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                    <ul class="nav navbar-nav nav_1">
+                        <li><a href="@routes.User.index()">首页</a></li>
+                        <li><a href="@routes.User.introduce()">本馆概况</a></li>
+                            <!--<li class="dropdown mega-dropdown active">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admissions<span class="caret"></span></a>-->
+                            <!--<div class="dropdown-menu mega-dropdown-menu">-->
+                            <!--<div class="container-fluid">-->
+                            <!--&lt;!&ndash; Tab panes &ndash;&gt;-->
+                            <!--<div class="tab-content">-->
+                            <!--<div class="tab-pane active" id="men">-->
+                            <!--<ul class="nav-list list-inline">-->
+                            <!--<li><a href="admission.html"><img src="images/t7.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t8.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t9.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div class="tab-pane" id="women">-->
+                            <!--<ul class="nav-list list-inline">-->
+                            <!--<li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t2.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t3.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t4.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t5.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--<li><a href="admission.html"><img src="images/t6.jpg" class="img-responsive"-->
+                            <!--alt=""/></a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--&lt;!&ndash; Nav tabs &ndash;&gt;-->
+                            <!--<ul class="nav nav-tabs" role="tablist">-->
+                            <!--<li class="active"><a href="#men" role="tab" data-toggle="tab">School</a></li>-->
+                            <!--<li><a href="#women" role="tab" data-toggle="tab">College</a></li>-->
+                            <!--</ul>-->
+                            <!--</div>-->
+                            <!--</li>-->
+                        <li><a href="@routes.User.readerService()">读者服务</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">本馆通知<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="terms.html">工作动态</a></li>
+                                <li><a href="shortcodes.html">公告通知</a></li>
+                                <li><a href="faq.html">新书通报</a></li>
+                                <li><a href="faq.html">读者荐购</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">本馆服务<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="terms.html">图书续借</a></li>
+                                <li><a href="shortcodes.html">学长学姐有话说</a></li>
+                                <li><a href="faq.html">留言板</a></li>
+                                <li><a href="faq.html">方向推荐</a></li>
+                                <li><a href="faq.html">学长学姐联系</a></li>
+                                <li><a href="faq.html">爱心图书捐赠</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="BuyBook.html">购书指南</a></li>
+                        <li><a href="WorkRoom.html">创新创业工作室</a></li>
+                        <li><a href="blog.html">其他</a></li>
+                            <!--<li><a href="career.html">Career</a></li>
+                <li class="last"><a href="contact.html">Contacts</a></li>-->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+            <!-- banner -->
+        <div class="banner">
+                <!-- banner Slider starts Here -->
+            <script src="@routes.Assets.at("js/responsiveslides.min.js")"></script>
+            <script>
+                    // You can also use "$(window).load(function() {"
+                    $(function () {
+                        // Slideshow 4
+                        $("#slider3").responsiveSlides({
+                            auto: true,
+                            pager: true,
+                            nav: true,
+                            speed: 500,
+                            namespace: "callbacks",
+                            before: function () {
+                                $('.events').append("<li>before event fired.</li>");
+                            },
+                            after: function () {
+                                $('.events').append("<li>after event fired.</li>");
+                            }
+                        });
+
+                    });
+            </script>
+                <!--//End-slider-script -->
+            <div id="top" class="callbacks_container">
+                <ul class="rslides" id="slider3">
+                    <li>
+                        <div class="banner-bg">
+                            <div class="container">
+                                <div class="banner-info">
+                                    <h3>Take the first step<span>to knowledge friends</span></h3>
+                                    <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+                                        playmakers, these kicks are ready to stand out.
+                                    </p>
+                                        <!--<a href="#"><i class="fa fa-thumbs-up icon_1"
+                                           style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>非常棒</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-bg banner-img2">
+                            <div class="container">
+                                <div class="banner-info">
+                                    <h3>Stay in touch<span>Lorem Ipsum</span></h3>
+                                    <p>Inspired by bold colors and matching up to football’s on-pitch
+                                        playmakers, these kicks are ready to stand out.
+                                    </p>
+                                        <!-- <a href="#"><i class="fa fa-thumbs-up icon_1"
+                                            style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>非常棒</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-bg banner-img">
+                            <div class="container">
+                                <div class="banner-info">
+                                    <h3>therefore always<span>looks reasonable</span></h3>
+                                    <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+                                        playmakers, these Brasil’s kicks are ready to stand out.
+                                    </p>
+                                        <!--<a href="#"><i class="fa fa-thumbs-up icon_1"
+                                           style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>非常棒</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        <!--<li>
+                <div class="banner-bg">
+                    <div class="container">
+                        <div class="banner-info">
+                            <h3>dolore magna<span>eaque ipsa</span></h3>
+                            <p>Inspired by bold colors and matching up to football’s on-pitch
+                                playmakers, these kicks are ready to stand out.
+                            </p>
+                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
+                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
+                                Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="banner-bg banner-img2">
+                    <div class="container">
+                        <div class="banner-info">
+                            <h3> trivial example,<span>who chooses</span></h3>
+                            <p>Inspired by Brasil’s bold colors and matching up to football’s on-pitch
+                                playmakers, these kicks Brasil’s are ready to stand out.
+                            </p>
+                            <a href="courses.html"><i class="fa fa-thumbs-up icon_1"
+                                                      style="font-size: 20px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 20px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View
+                                Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </li>-->
+
+                </ul>
+            </div>
+        </div>
+            <!-- //banner -->
+            <!--<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">手机网站模板</a></div>-->
+        <div class="details">
+            <div class="container">
+                <div class="col-sm-10 dropdown-buttons">
+                        <!--<div class="col-sm-3 dropdown-button">
+                <div class="input-group">
+                    <input class="form-control has-dark-background" name="slider-name" id="slider-name"
+                           placeholder="Name" type="text" required="">
+                </div>
+            </div>-->
+                    <div class="col-sm-4 dropdown-button">
+                        <div class="section_1">
+                                <!-- <select id="country" onChange="change_country(this.value)" class="frm-field required">-->
+                            <select id="sources" class="frm-field required">
+                                    <!--<option value="null">书柜资源</option>
+                        <option value="null">电子资源</option>
+                        <option value="AX">硬盘资源</option>-->
+                                    <!--<option value="AX">Intermediate</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 dropdown-button">
+                        <div class="section_1">
+                            <select id="contents" class="frm-field required">
+                                    <!-- <option value="null">题名</option>
+                         <option value="null">作者</option>
+                         <option value="AX">索书号</option>
+                         <option value="AX">入馆时间</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 dropdown-button">
+                        <div class="input-group">
+                            <input class="form-control has-dark-background" name="slider-name" id="slider-name"
+                            placeholder="本馆资源搜索" type="text" required="">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-sm-2 submit_button">
+                    <form>
+                        <input type="submit" value="搜索">
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="grid_1">
+            <div class="container">
+                <div class="col-md-4">
+                    <div class="news">
+                        <h3>本馆读书排名</h3>
+                        <div class="section-content">
+                                <!--<article>
+                        <figure class="date"><i class="fa fa-file-o"></i>07-25-2015</figure>
+                        <a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                    </article>
+                    <article>
+                        <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
+                        <a href="#">It is a long established fact that a reader will be distracted.</a>
+                    </article>
+                    <article>
+                        <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
+                        <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                    </article>
+                    <article>
+                        <figure class="date"><i class="fa fa-file-o"></i>08-24-2014</figure>
+                        <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text.</a>
+                    </article>-->
+                            <div class="rank_box">
+                                <div class="rank_left">
+                                    <img src="@routes.Assets.at("images/t9.jpg")" class="img-responsive" alt=""/>
+                                </div>
+                                <div class="rank_right">
+                                    <div class="rank_right-item">
+                                        <h4><a href="#">风轻云淡</a></h4>
+                                        <p>当前已阅读<span id="num1">122</span>本书 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rank_box">
+                                <div class="rank_left">
+                                    <img src="@routes.Assets.at("images/t9.jpg")" class="img-responsive" alt=""/>
+                                </div>
+                                <div class="rank_right">
+                                    <div class="rank_right-item">
+                                        <h4><a href="#">风轻云淡</a></h4>
+                                        <p>当前已阅读<span id="num2">122</span>本书 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rank_box">
+                                <div class="rank_left">
+                                    <img src="@routes.Assets.at("images/t9.jpg")" class="img-responsive" alt=""/>
+                                </div>
+                                <div class="rank_right">
+                                    <div class="rank_right-item">
+                                        <h4><a href="#">风轻云淡</a></h4>
+                                        <p>当前已阅读<span id="num3">122</span>本书 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rank_box">
+                                <div class="rank_left">
+                                    <img src="@routes.Assets.at("images/t9.jpg")" class="img-responsive" alt=""/>
+                                </div>
+                                <div class="rank_right">
+                                    <div class="rank_right-item">
+                                        <h4><a href="#">风轻云淡</a></h4>
+                                        <p>当前已阅读<span id="num4">122</span>本书 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rank_box">
+                                <div class="rank_left">
+                                    <img src="@routes.Assets.at("images/t9.jpg")" class="img-responsive" alt=""/>
+                                </div>
+                                <div class="rank_right">
+                                    <div class="rank_right-item">
+                                        <h4><a href="#">风轻云淡</a></h4>
+                                        <p>当前已阅读<span id="num5">122</span>本书 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.section-content -->
+                        <a href="#" class="read-more">更多</a>
+                    </div><!-- /.news-small -->
+                </div>
+                <div class="col-md-8 grid_1_right">
+                    <h3>本馆通知</h3>
+                    <div class="but_list">
+                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                            <ul id="myTab" class="nav nav-tabs nav-tabs1" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab"
+                                data-toggle="tab" aria-controls="home"
+                                aria-expanded="true">工作动态</a></li>
+                                <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab"
+                                aria-controls="profile">公告通知</a></li>
+                                <li role="presentation"><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab"
+                                aria-controls="profile1">新书通报</a></li>
+                                <li role="presentation"><a href="#profile2" role="tab" id="profile-tab2" data-toggle="tab"
+                                aria-controls="profile2">读者荐购</a></li>
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>From Who</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">标题</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                                <!-- <img src="images/t5.jpg" class="img-responsive" alt=""/>-->
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="profile1" aria-labelledby="profile-tab1">
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>作者</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">书名</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                            <img src="@routes.Assets.at("images/book.png")" class="img-responsive" alt=""/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>作者</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">书名</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                            <img src="@routes.Assets.at("images/book.png")" class="img-responsive" alt=""/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="profile2" aria-labelledby="profile-tab2">
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>作者</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">书名</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                            <img src="@routes.Assets.at("images/book.png")" class="img-responsive" alt=""/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="events_box">
+                                        <div class="event_left">
+                                            <div class="event_left-item">
+                                                <div class="icon_2"><i class="fa fa-clock-o"></i>2017/02/05 19:30</div>
+                                                <div class="icon_2"><i class="fa fa-user"></i>作者</div>
+                                                    <!--<div class="icon_2">
+                                            <div class="speaker">
+                                                <i class="fa fa-user"></i>
+                                                <div class="speaker_item">
+                                                    <a href="#">Lorem Ipsum</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>-->
+                                            </div>
+                                        </div>
+                                        <div class="event_right">
+                                            <h3><a href="#">书名</a></h3>
+                                            <p>本文内容 <a href="#">更多</a></p>
+                                            <img src="@routes.Assets.at("images/book.png")" class="img-responsive" alt=""/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="read-more">更多</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+                <!--<div class="bg">
+        <div class="container">
+            <div class="timer_wrap">
+                <div id="counter"></div>
+            </div>
+            <div class="newsletter">
+                <form>
+                    <input type="text" name="ne" size="30" required="" placeholder="Please fill your email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </div>-->
+        </div>
+        <div class="bottom_content">
+            <h3>本馆服务</h3>
+            <div class="grid_2">
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="@routes.Assets.at("images/bk.jpg")" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">图书续借</a></h4>
+                        <p>希望各位读者好好珍惜书籍资料，及时续借，以免造成不必要的麻烦！</p>
+
+                        <a href="events.html">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="@routes.Assets.at("images/thank.jpg")" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">学长学姐有话说</a></h4>
+                        <p>如果你对自己的大学学习充满迷茫，或许学长学姐的的忠告，可以给你们带来启示！</p>
+
+                        <a href="@routes.Assets.at("events.html")">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="@routes.Assets.at("images/message.jpg")" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">留言板</a></h4>
+                        <p>把你想对实验室说的话，尽情的说出来吧！不要害羞哦~~</p>
+                            <!--<span>-->
+                            <!--<a href="students.html">School Studies</a>-->
+                            <!--<a href="students.html">College Studies</a>-->
+                            <!--</span>-->
+                        <a href="events.html">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="grid_3">
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="@routes.Assets.at("images/program.jpg")" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">方向推荐</a></h4>
+                        <p>当你不知道选什么方向，也许这里可以给你带来一些启示！</p>
+                            <!--<span>
+                  <a href="students.html">School Studies</a>
+                  <a href="students.html">College Studies</a>
+                </span>-->
+                        <a href="events.html">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="@routes.Assets.at("images/contract.png")" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">学长学姐联系</a></h4>
+                        <p>想和学长学姐聊聊，点击这里，我们将告诉你他们的QQ号。</p>
+                            <!--<span>-->
+                            <!--<a href="students.html">School Studies</a>-->
+                            <!--<a href="students.html">College Studies</a>-->
+                            <!--</span>-->
+                        <a href="events.html">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-4 portfolio-left">
+                    <div class="portfolio-img event-img">
+                        <img src="images/t10.jpg" class="img-responsive" alt=""/>
+                        <div class="over-image"></div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h4><a href="#">爱心图书捐赠</a></h4>
+                        <p>大家都好有爱啊，给图书馆捐了这么多书，好感动啊！！</p>
+                            <!--<span>-->
+                            <!--<a href="students.html">School Studies</a>-->
+                            <!--<a href="students.html">College Studies</a>-->
+                            <!--</span>-->
+                        <a href="events.html">
+                            <span><i class="fa fa-chain chain_1"></i>查看详情</span>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-3 grid_4">
+                    <h3>关于我们</h3>
+                    <p>感谢大家对本馆的使用，如果大家有什么建议可以联系我们的管理员或者直接在首页进行反馈，我们将慎重考虑大家的意见</p>
+                    <ul class="social-nav icons_2 clearfix">
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="facebook"> <i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 grid_4">
+                    <h3>其他图书馆</h3>
+                    <ul class="footer_list">
+                        <li><a href="#">-吉首大学图书馆 </a></li>
+                        <li><a href="#">- 中山大学图书馆</a></li>
+                        <li><a href="#">- 北京大学图书馆</a></li>
+                        <li><a href="#">- 清华大学图书馆</a></li>
+                        <li><a href="#">- 浙江大学图书馆</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 grid_4">
+                    <h3>联系我们</h3>
+                    <address>
+                        <span>黄老师</span>
+                        <br>
+                        <abbr>手机号码 : </abbr> 18797537398
+                        <br>
+                        <abbr>邮箱 : </abbr> <a href="mailto@@example.com">13221312@@</a>
+                        <br><br>
+                        <span>馆长</span>
+                        <br>
+                        <abbr>手机号码 : </abbr> 18797537398
+                        <br>
+                        <abbr>邮箱 : </abbr> <a href="mailto@@example.com">13221312@@</a>
+                    </address>
+                </div>
+                <div class="col-md-3 grid_4">
+                    <h3>工作时间</h3>
+                    <table class="table_working_hours">
+                        <tbody>
+                            <tr class="opened_1">
+                                <td class="day_label">星期一</td>
+                                <td class="day_value">19:00 am - 22.00 pm</td>
+                            </tr>
+                            <tr class="opened">
+                                <td class="day_label">星期二</td>
+                                <td class="day_value">19:00 am - 22.00 pm</td>
+                            </tr>
+                            <tr class="opened">
+                                <td class="day_label">星期三</td>
+                                <td class="day_value">19:00 am - 22.00 pm</td>
+                            </tr>
+                            <tr class="opened">
+                                <td class="day_label">星期四</td>
+                                <td class="day_value">19:00 am - 22.00 pm</td>
+                            </tr>
+                            <tr class="opened">
+                                <td class="day_label">星期五</td>
+                                <td class="day_value">19:00 am - 22.00 pm</td>
+                            </tr>
+                            <tr class="closed">
+                                <td class="day_label">星期日</td>
+                                <td class="day_value">09:00 am - 22.00 pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                    <!--<div class="clearfix"></div>
+        <div class="copy">
+            <p>Copyright &copy;
+
+                                                                                                                                                                                                                                                            href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+            </p>
+        </div>-->
+            </div>
+        </div>
+        <script>
+                $(document).ready(function () {
+                    $(".dropdown").hover(
+                            function () {
+                                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                                $(this).toggleClass('open');
+                            },
+                            function () {
+                                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                                $(this).toggleClass('open');
+                            }
+                    );
+
+                    var data = [
+                        {
+                            source: "书柜资源",
+                            content: [
+                                "书名",
+                                "作者",
+                                "入馆时间",
+                                "索书号"
+                            ]
+                        },
+                        {
+                            source: "硬盘资源",
+                            content: [
+                                "项目资料",
+                                "学习视频",
+                                "招新资料",
+                                "活动资料",
+                                "奖项资料",
+                                "其他"
+                            ]
+                        },
+                        {
+                            source: "电子资源",
+                            content: [
+                                "题名",
+                                "作者",
+                                "入馆时间"
+                            ]
+                        }
+                    ];
+                    var s1 = $("#sources");
+                    var s2 = $("#contents");
+
+                    $.each(data, function (d) {
+                        var t = data[d].source;
+                        s1.append("<option value='" + t + "'>" + t + "</option>")
+                    });
+
+                    var init = data[0].content;
+
+                    $.each(init, function (d) {
+                        s2.append("<option value='" + init[d] + "'>" + init[d] + "</option>")
+                    });
+
+                    s1.change(function () {
+                        s2.empty();
+                        var index = s1.get(0).selectedIndex;
+                        var t = data[index].content;
+                        $.each(t, function (d) {
+                            s2.append("<option value='" + t[d] + "'>" + t[d] + "</option>")
+                        })
+                    })
+                });
+        </script>
+        <script src="@routes.Assets.at("js/jquery.countdown.js")"></script>
+        <script src="@routes.Assets.at("js/script.js")"></script>
+    </body>
+</html>}

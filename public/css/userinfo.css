@@ -1,0 +1,820 @@
+/*
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+#main {
+    padding: 0!important;
+    min-height: 650px;
+}
+
+#main {
+    min-height: 750px;
+    padding: 20px 0;
+}
+
+.settings-cont {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.clearfix {
+}
+
+.settings-cont .setting-left {
+    width: 216px;
+    background-color: #f8fafc;
+}
+
+.l {
+    float: left;
+}
+
+.settings-cont .setting-right {
+    float: left;
+    margin-left: 48px;
+    width: 936px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.settings-cont .setting-left .avator-wapper {
+    padding: 32px 0 24px;
+}
+
+.settings-cont .setting-left .avator-mode {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 4px solid #d9dde1;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.settings-cont .setting-left .avator-mode .update-avator a {
+    color: inherit;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.settings-cont .setting-left .des-mode {
+    font-size: 16px;
+    text-align: center;
+}
+
+.settings-cont .setting-left .list-wapper {
+    overflow: hidden;
+}
+
+.settings-cont .setting-left .list-wapper h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 12px 24px;
+    font-weight: 700;
+}
+
+.settings-cont .setting-left .list-wapper .line {
+    height: 1px;
+    background-color: #d9dde1;
+    margin: 0 24px;
+}
+
+.line {
+    height: 1px;
+    background-color: #d0d6d9;
+    margin-top: 12px;
+}
+
+.line {
+    height: 1px;
+    background-color: #d0d6d9;
+    margin-top: 12px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+
+.settings-cont .setting-left .list-wapper .menu a {
+    display: block;
+    position: relative;
+    padding: 0 0 0 54px;
+    height: 48px;
+    line-height: 48px;
+    transition: background-color .3s ease;
+}
+
+a:link, a:visited, body, html {
+    color: #14191e;
+}
+
+a:link, a:visited {
+    color: #5e5e5e;
+}
+
+:link, :visited, ins {
+    text-decoration: none;
+}
+
+a, button, input {
+    outline: 0;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}*/
+#main {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+#main {
+    padding: 0 !important;
+    min-height: 650px;
+}
+
+#main {
+    min-height: 750px;
+    padding: 20px 0;
+}
+
+.settings-cont {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.settings-cont .setting-left {
+    width: 216px;
+    background-color: #f8fafc;
+}
+
+.l {
+    float: left;
+}
+
+.l {
+    float: left;
+}
+
+.settings-cont .setting-right {
+    float: left;
+    margin-left: 48px;
+    width: 936px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.settings-cont .setting-left .avator-wapper {
+    padding: 32px 0 24px;
+}
+
+.settings-cont .setting-left .avator-mode {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 4px solid #d9dde1;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+img {
+    width: 92px;
+    height: 92px;
+}
+
+.settings-cont .setting-left .avator-mode .update-avator {
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -30px;
+    transition: bottom .3s;
+    -moz-transition: bottom .3s;
+    -webkit-transition: bottom .3s;
+    -o-transition: bottom .3s;
+}
+
+.settings-cont .setting-left .avator-mode .update-avator p {
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
+    line-height: 30px;
+}
+
+.settings-cont .setting-left .avator-mode .update-avator a {
+    color: inherit;
+}
+
+a:link, a:visited, body, html {
+    color: #14191e;
+}
+
+a:link, a:visited {
+    color: #5e5e5e;
+}
+
+:link, :visited, ins {
+    text-decoration: none;
+}
+
+a, button, input {
+    outline: 0;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: auto;
+    text-decoration: underline;
+}
+
+.settings-cont .setting-left .des-mode {
+    font-size: 16px;
+    text-align: center;
+}
+
+.settings-cont .setting-left .des-mode p {
+    line-height: 44px;
+    width: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+iframe {
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+}
+
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.line {
+    height: 1px;
+    background-color: #d0d6d9;
+    margin-top: 12px;
+}
+
+.settings-cont .setting-left .list-wapper {
+    overflow: hidden;
+}
+
+.settings-cont .setting-left .list-wapper h2 {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 12px 24px;
+    font-weight: 700;
+}
+
+.settings-cont .setting-left .list-wapper .menu {
+    padding: 10px 0 25px;
+}
+
+.settings-cont .setting-left .list-wapper .menu a {
+    display: block;
+    position: relative;
+    padding: 0 0 0 54px;
+    height: 48px;
+    line-height: 48px;
+    transition: background-color .3s ease;
+    color: #000000;
+}
+
+.settings-cont .setting-left .list-wapper .menu a .arr {
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+.settings-cont .setting-left .list-wapper .menu a.on {
+    color: #fff;
+    background-color: #f01414;
+}
+
+a:link, a:visited, body, html {
+    color: #14191e;
+}
+
+a:link, a:visited {
+    color: #5e5e5e;
+}
+
+a:link, :visited, ins {
+    text-decoration: none;
+}
+
+a, button, input {
+    outline: 0;
+}
+
+.settings-cont .setting-right-wrap {
+    min-height: 550px;
+}
+
+.setting-right-wrap {
+    padding: 0 !important;
+}
+
+.common-title {
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.common-title a {
+    color: #93999f;
+    font-weight: 400;
+}
+
+.common-title a i {
+    color: #008cc8;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.pull-right {
+    float: right;
+}
+
+.setting-profile .info-wapper {
+    margin: 24px auto 24px 40px;
+}
+
+.setting-profile .info-box {
+    margin-bottom: 12px;
+}
+
+.setting-profile .info-box label {
+    width: 120px;
+    line-height: 20px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f3f5f7;
+    color: #07111b;
+    font-weight: 700;
+}
+
+.setting-profile .info-box div {
+    width: 708px;
+    margin-left: 8px;
+    line-height: 20px;
+    padding: 20px 0 20px 22px;
+    border-bottom: 1px solid #d9dde1;
+}
+
+.pull-left {
+    float: left;
+}
+
+label {
+    cursor: default;
+}
+
+.clearfix {
+
+}
+
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+.moco-form-group {
+    overflow: hidden;
+}
+
+.moco-control-label {
+    width: 118px !important;
+}
+
+.moco-control-label {
+    text-align: right;
+    margin-bottom: 0;
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+.moco-control-label {
+    width: 20%;
+    font-weight: bold;
+}
+
+.moco-control-input {
+    width: 298px!important;
+}
+
+.moco-control-input {
+    border-radius: 0;
+    width: 80%;
+}
+
+.moco-control-label{
+    float: left;
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+
+.edit-info .wlfg-wrap .rlf-radio-group {
+    max-width: 402px;
+    padding-left: 10px;
+}
+
+.edit-info .wlfg-wrap .rlf-group {
+    float: left;
+    margin-left: 8px;
+    color: #60686b;
+}
+
+.moco-control-input {
+    float: left;
+    padding: 0 5px;
+    box-sizing: border-box
+}
+
+.moco-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #787d82;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.rlf-tip-wrap {
+    height: 24px!important;
+    line-height: 24px!important;
+}
+
+.errorHint {
+    height: 25px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #f01414;
+}
+
+.color-red {
+    color: #EF1300!important;
+}
+
+.pr {
+    position: relative;
+}
+
+.edit-info .wlfg-wrap textarea {
+    height: 70px;
+}
+
+textarea.moco-form-control {
+    height: auto;
+}
+
+.noresize {
+    resize: none;
+}
+
+.moco-form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #787d82;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.edit-info .wlfg-wrap .numCanInput {
+    font-size: 12px;
+    line-height: 26px;
+    color: #787d82;
+    margin-bottom: 6px;
+}
+
+
+/*
+  账号管理
+ */
+.page-settings .setting .bingd .itemBox {
+    height: 88px;
+    overflow: hidden;
+    margin: auto;
+    border-bottom: 1px solid #d9dde1;
+}
+
+.page-settings .setting .bingd .itemBox .left {
+    width: 60px;
+    float: left;
+    font-size: 36px;
+    color: #d9dde1;
+    line-height: 98px;
+    padding-left: 24px;
+    margin-right: 15px;
+}
+
+.page-settings .setting .bingd .itemBox .center {
+    padding-top: 22px;
+    width: 510px;
+    float: left;
+}
+
+.page-settings .setting .bingd .itemBox p {
+    line-height: 24px;
+    font-size: 12px;
+}
+
+.page-settings .setting .bingd .itemBox .font1 {
+    color: #2b333b;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.page-settings .setting .bingd .itemBox .font3 {
+    color: #2b333b;
+    font-size: 14px;
+}
+
+.hide {
+    display: none;
+}
+
+.page-settings .setting .bingd .itemBox .font4 {
+    color: #f01414;
+    font-size: 14px;
+}
+
+.page-settings .setting .bingd .itemBox .font2 {
+    color: #93999f;
+    font-size: 14px;
+}
+
+.page-settings .setting .bingd .itemBox .right {
+    float: right;
+    padding-right: 12px;
+    margin-top: 28px;
+}
+
+.page-settings .setting .bingd .itemBox .right .moco-btn-normal {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.moco-btn-normal:link, .moco-btn-normal:visited {
+    color: #787D82;
+}
+
+
+.moco-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-weight: 200;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    white-space: nowrap;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-color: #d0d6d9;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/*
+  邮箱管理
+ */
+.setting-email .m-MailBox {
+    padding: 20px 18px 18px;
+}
+
+.setting-email.f-cb, .f-cbli li {
+    zoom: 1;
+}
+
+.setting-email .m-MailBox ul {
+    margin: 0 0 35px 10px;
+    font-family: '微软雅黑';
+}
+
+.setting-email .m-MailBox ul li {
+    margin: 0 0 26px;
+}
+
+.setting-email .m-MailBox ul li input {
+    margin: 0 10px 0 0;
+    position: relative;
+    top: -2px;
+}
+
+
+.setting-email .m-MailBox ul li label {
+    display: inline-block;
+    width: 200px;
+    color: #000000;
+}
+
+.setting-email li{
+    list-style: none;
+}
+
+/*
+通知管理
+*/
+.setting-notify .m-MesBox {
+    padding: 18px;
+}
+
+.setting-notify.f-cb, .f-cbli li {
+    zoom: 1;
+}
+
+.setting-notify .m-MesBox h3 {
+    font-size: 12px;
+    font-family: '宋体';
+    color: #ccc;
+    margin-bottom: 25px;
+
+}
+
+.setting-notify .m-MesBox .tit {
+    color: #333;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+
+.setting-email .m-MesBox ul {
+    margin: 0 0 45px;
+    font-family: '微软雅黑';
+}
+
+
+.setting-notify .m-MesBox ul li {
+    margin: 0 0 26px;
+    float: left;
+    width: 322px;
+}
+.setting-notify li{
+    list-style: none;
+}
+
+/*
+更换头像
+ */
+.moco-modal-inner .moco-modal-dialog {
+    padding: 24px 32px 32px;
+}
+.tpl-avator {
+    width: 422px;
+}
+
+.tpl-avator .avator-wapper {
+    color: #008cc8;
+    margin-bottom: 20px;
+}
+
+.moco-form-group {
+    overflow: hidden;
+}
+
+.tpl-avator .avator-mode {
+    width: 192px;
+    height: 192px;
+    background-color: #d9dde1;
+    text-align: center;
+    margin: 0 auto 30px;
+    border: 4px solid #d9dde1;
+    border-radius: 96px;
+    overflow: hidden;
+}
+
+.tpl-avator .w140 {
+    width: 140px;
+    margin: 0 auto;
+}
+
+.w140 {
+    width: 140px!important;
+}
+
+.clearfix {
+}
+
+.tpl-avator .avator-wapper a {
+    color: inherit;
+}
+
+.tpl-avator a {
+    cursor: pointer;
+}
+
+.pull-left {
+    float: left;
+}
+
+a, button, input {
+    outline: 0;
+}
+
+.moco-form-group {
+    overflow: hidden;
+}
+
+.moco-control-label {
+    text-align: right;
+    margin-bottom: 0;
+    font-weight: bold;
+    padding-top: 7px;
+}
+
+.moco-control-label {
+    width: 20%;
+    font-weight: bold;
+}
+
+.moco-control-label, .moco-control-input {
+    float: left;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+/*
+修改密码
+ */
+.modal-footer{
+    text-align: center;
+}

@@ -2,15 +2,23 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET         /                    controllers.Application.index
+GET         /                     controllers.User.index
 
-GET         /create              controllers.Manager.createBook
+GET         /login                controllers.User.login
 
-POST        /upload              controllers.Manager.uploadBook
+GET         /introduce            controllers.User.introduce
 
-GET         /delete              controllers.Manager.deleteBook
+GET         /readerservice        controllers.User.readerService
 
-GET         /borrow                controllers.User.borrow
+GET         /create               controllers.Manager.createBook
+
+POST        /upload               controllers.Manager.uploadBook
+
+GET         /delete               controllers.Manager.deleteBook
+
+GET         /borrow               controllers.User.borrow
+
+GET         /test                 controllers.User.test
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file         controllers.Assets.at(path="/public", file)

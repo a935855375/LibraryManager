@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/fan/sbtProject/Library Manager/conf/routes
-// @DATE:Mon Nov 20 14:32:15 CST 2017
+// @DATE:Mon Nov 27 10:19:27 CST 2017
 
 
 package router {

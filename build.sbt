@@ -22,3 +22,6 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.0
 libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.41"
 
 libraryDependencies += "org.reactivemongo" %% "play2-reactivemongo" % "0.12.7-play26"
+
+libraryDependencies += "com.typesafe.play" %% "play-mailer" % "6.0.1"
+libraryDependencies += "com.typesafe.play" %% "play-mailer-guice" % "6.0.1"

@@ -29,15 +29,15 @@ class User @Inject()(cc: MessagesControllerComponents,
   }
 
   def introduce = Action.async { implicit request =>
-    Future.successful(Ok(views.html.introduce()))
+    Future.successful(Ok(views.html.common.introduce()))
   }
 
   def readerService = Action.async { implicit request =>
-    Future.successful(Ok(views.html.readerService()))
+    Future.successful(Ok(views.html.common.readerService()))
   }
 
-  def register = {
-
+  def register = Action.async { implicit request =>
+    Future.successful(Ok(views.html.register()))
   }
 
   def doRegister = {
@@ -56,7 +56,7 @@ class User @Inject()(cc: MessagesControllerComponents,
 
   /**
     * 在这里测试mongodb的elem查询 查询所有预定过bid为1的用户
-    *db.order.find({"book":{$elemMatch:{"bid":1}}}).pretty()
+    * db.order.find({"book":{$elemMatch:{"bid":1}}}).pretty()
     */
   def elemMatchTest = Action.async { implicit request =>
     Future.successful(Ok)

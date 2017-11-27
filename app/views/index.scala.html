@@ -3,190 +3,10 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>图书馆首页</title>
-        <link rel="shortcut icon" href="@routes.Assets.at("images/logo.ico")"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="keywords" content="Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
-        <script type="application/x-javascript"> addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        } </script>
-        <link href="@routes.Assets.at("css/bootstrap-3.1.1.min.css")" rel='stylesheet' type='text/css'/>
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="@routes.Assets.at("js/jquery.min.js")"></script>
-        <script src="@routes.Assets.at("js/bootstrap.min.js")"></script>
-            <!-- Custom Theme files -->
-        <link href="@routes.Assets.at("css/index.css")" rel='stylesheet' type='text/css'/>
-        <link href="@routes.Assets.at("css/style.css")" rel='stylesheet' type='text/css'/>
-        <link rel="stylesheet" href="@routes.Assets.at("css/jquery.countdown.css")"/>
-
-        <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-            <!----font-Awesome----->
-        <link href="@routes.Assets.at("css/font-awesome.css")" rel="stylesheet">
-            <!----font-Awesome----->
+        @head("首页")
     </head>
     <body>
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                        <!--<a class="navbar-brand" href="index.html">JSUCCW LIBRARY</a>-->
-                    <img src="@routes.Assets.at("images/logo.png")" alt="创新创业工作室图书馆" class="img-responsive"
-                    style="height: 50px;
-                        width: 250px;
-                        margin-top: 5px">
-                </div>
-                    <!--/.navbar-header-->
-                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="@routes.User.login()"><i class="fa fa-user"></i><span>登录</span></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-list"></i><span>资源</span></a>
-                                <!--<ul class="dropdown-menu">
-                        <li><a href="courses.html">学习网站</a></li>
-                        <li><a href="courses.html">大一排名</a></li>
-                        <li><a href="course_detail.html">大二排名</a></li>
-                        <li><a href="course_detail.html">大三排名</a></li>
-                    </ul>-->
-                        </li>
-                            <!--<li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-calendar"></i><span>实验室事件</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="events.html">Event1</a></li>
-                        <li><a href="events.html">Event2</a></li>
-                        <li><a href="events.html">Event3</a></li>
-                    </ul>
-                </li>-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-globe"></i><span>反馈</span></a>
-                                <!--<ul class="dropdown-menu">
-                        <li><a href="#"><span><i class="flags us"></i><span>English</span></span></a></li>
-                        <li><a href="#"><span><i class="flags newzland"></i><span>Newzland</span></span></a></li>
-                    </ul>-->
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                            class="fa fa-search"></i><span>搜索</span></a>
-                            <ul class="dropdown-menu search-form">
-                                <form>
-                                    <input type="text" class="search-text" name="s" placeholder="Search...">
-                                    <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
-                                </form>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-                <!--/.navbar-collapse-->
-        </nav>
-        <nav class="navbar nav_bottom" role="navigation">
-            <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header nav_2">
-                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse"
-                    data-target="#bs-megadropdown-tabs">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#"></a>
-                </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-                    <ul class="nav navbar-nav nav_1">
-                        <li><a href="@routes.User.index()">首页</a></li>
-                        <li><a href="@routes.User.introduce()">本馆概况</a></li>
-                            <!--<li class="dropdown mega-dropdown active">-->
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admissions<span class="caret"></span></a>-->
-                            <!--<div class="dropdown-menu mega-dropdown-menu">-->
-                            <!--<div class="container-fluid">-->
-                            <!--&lt;!&ndash; Tab panes &ndash;&gt;-->
-                            <!--<div class="tab-content">-->
-                            <!--<div class="tab-pane active" id="men">-->
-                            <!--<ul class="nav-list list-inline">-->
-                            <!--<li><a href="admission.html"><img src="images/t7.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t8.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t9.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--</ul>-->
-                            <!--</div>-->
-                            <!--<div class="tab-pane" id="women">-->
-                            <!--<ul class="nav-list list-inline">-->
-                            <!--<li><a href="admission.html"><img src="images/t1.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t2.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t3.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t4.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t5.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--<li><a href="admission.html"><img src="images/t6.jpg" class="img-responsive"-->
-                            <!--alt=""/></a></li>-->
-                            <!--</ul>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash; Nav tabs &ndash;&gt;-->
-                            <!--<ul class="nav nav-tabs" role="tablist">-->
-                            <!--<li class="active"><a href="#men" role="tab" data-toggle="tab">School</a></li>-->
-                            <!--<li><a href="#women" role="tab" data-toggle="tab">College</a></li>-->
-                            <!--</ul>-->
-                            <!--</div>-->
-                            <!--</li>-->
-                        <li><a href="@routes.User.readerService()">读者服务</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">本馆通知<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="terms.html">工作动态</a></li>
-                                <li><a href="shortcodes.html">公告通知</a></li>
-                                <li><a href="faq.html">新书通报</a></li>
-                                <li><a href="faq.html">读者荐购</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">本馆服务<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="terms.html">图书续借</a></li>
-                                <li><a href="shortcodes.html">学长学姐有话说</a></li>
-                                <li><a href="faq.html">留言板</a></li>
-                                <li><a href="faq.html">方向推荐</a></li>
-                                <li><a href="faq.html">学长学姐联系</a></li>
-                                <li><a href="faq.html">爱心图书捐赠</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="BuyBook.html">购书指南</a></li>
-                        <li><a href="WorkRoom.html">创新创业工作室</a></li>
-                        <li><a href="blog.html">其他</a></li>
-                            <!--<li><a href="career.html">Career</a></li>
-                <li class="last"><a href="contact.html">Contacts</a></li>-->
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>
-        </nav>
+        @top()
             <!-- banner -->
         <div class="banner">
                 <!-- banner Slider starts Here -->
@@ -786,7 +606,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="col-md-4 portfolio-left">
                     <div class="portfolio-img event-img">
-                        <img src="images/t10.jpg" class="img-responsive" alt=""/>
+                        <img src="@routes.Assets.at("images/t10.jpg")" class="img-responsive" alt=""/>
                         <div class="over-image"></div>
                     </div>
                     <div class="portfolio-description">
@@ -805,83 +625,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="clearfix"></div>
             </div>
         </div>
-        <div class="footer">
-            <div class="container">
-                <div class="col-md-3 grid_4">
-                    <h3>关于我们</h3>
-                    <p>感谢大家对本馆的使用，如果大家有什么建议可以联系我们的管理员或者直接在首页进行反馈，我们将慎重考虑大家的意见</p>
-                    <ul class="social-nav icons_2 clearfix">
-                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="facebook"> <i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 grid_4">
-                    <h3>其他图书馆</h3>
-                    <ul class="footer_list">
-                        <li><a href="#">-吉首大学图书馆 </a></li>
-                        <li><a href="#">- 中山大学图书馆</a></li>
-                        <li><a href="#">- 北京大学图书馆</a></li>
-                        <li><a href="#">- 清华大学图书馆</a></li>
-                        <li><a href="#">- 浙江大学图书馆</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 grid_4">
-                    <h3>联系我们</h3>
-                    <address>
-                        <span>黄老师</span>
-                        <br>
-                        <abbr>手机号码 : </abbr> 18797537398
-                        <br>
-                        <abbr>邮箱 : </abbr> <a href="mailto@@example.com">13221312@@</a>
-                        <br><br>
-                        <span>馆长</span>
-                        <br>
-                        <abbr>手机号码 : </abbr> 18797537398
-                        <br>
-                        <abbr>邮箱 : </abbr> <a href="mailto@@example.com">13221312@@</a>
-                    </address>
-                </div>
-                <div class="col-md-3 grid_4">
-                    <h3>工作时间</h3>
-                    <table class="table_working_hours">
-                        <tbody>
-                            <tr class="opened_1">
-                                <td class="day_label">星期一</td>
-                                <td class="day_value">19:00 am - 22.00 pm</td>
-                            </tr>
-                            <tr class="opened">
-                                <td class="day_label">星期二</td>
-                                <td class="day_value">19:00 am - 22.00 pm</td>
-                            </tr>
-                            <tr class="opened">
-                                <td class="day_label">星期三</td>
-                                <td class="day_value">19:00 am - 22.00 pm</td>
-                            </tr>
-                            <tr class="opened">
-                                <td class="day_label">星期四</td>
-                                <td class="day_value">19:00 am - 22.00 pm</td>
-                            </tr>
-                            <tr class="opened">
-                                <td class="day_label">星期五</td>
-                                <td class="day_value">19:00 am - 22.00 pm</td>
-                            </tr>
-                            <tr class="closed">
-                                <td class="day_label">星期日</td>
-                                <td class="day_value">09:00 am - 22.00 pm</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                    <!--<div class="clearfix"></div>
-        <div class="copy">
-            <p>Copyright &copy;
 
-                                                                                                                                                                                                                                                            href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
-            </p>
-        </div>-->
-            </div>
-        </div>
+        @footer()
+
         <script>
                 $(document).ready(function () {
                     $(".dropdown").hover(

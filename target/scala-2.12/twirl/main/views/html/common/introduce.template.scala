@@ -1,5 +1,5 @@
 
-package views.html
+package views.html.common
 
 import _root_.play.twirl.api.TwirlFeatureImports._
 import _root_.play.twirl.api.TwirlHelperImports._
@@ -15,7 +15,7 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object readerService extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object introduce extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
   def apply/*1.2*/():play.twirl.api.HtmlFormat.Appendable = {
@@ -23,7 +23,8 @@ object readerService extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.
       {
 
 
-Seq[Any]()
+Seq[Any](format.raw/*1.4*/("""
+"""))
       }
     }
   }
@@ -39,11 +40,11 @@ Seq[Any]()
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 23 21:30:51 CST 2017
-                  SOURCE: /home/fan/sbtProject/Library Manager/app/views/readerService.scala.html
-                  HASH: ed540598523d74811ea49d48e1189053d48aed6a
-                  MATRIX: 730->1
-                  LINES: 21->1
+                  DATE: Mon Nov 27 16:54:27 CST 2017
+                  SOURCE: /home/fan/sbtProject/Library Manager/app/views/common/introduce.scala.html
+                  HASH: 6bfd8486b63511c30d3793e9c211ccd2c44c6893
+                  MATRIX: 733->1|829->3
+                  LINES: 21->1|26->1
                   -- GENERATED --
               */
           

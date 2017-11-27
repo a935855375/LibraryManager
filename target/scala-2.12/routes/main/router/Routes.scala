@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/fan/sbtProject/Library Manager/conf/routes
-// @DATE:Mon Nov 27 10:19:27 CST 2017
+// @DATE:Mon Nov 27 16:40:39 CST 2017
 
 package router
 
@@ -16,9 +16,9 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:5
   User_2: controllers.User,
-  // @LINE:13
+  // @LINE:15
   Manager_0: controllers.Manager,
-  // @LINE:24
+  // @LINE:26
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -27,9 +27,9 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:5
     User_2: controllers.User,
-    // @LINE:13
+    // @LINE:15
     Manager_0: controllers.Manager,
-    // @LINE:24
+    // @LINE:26
     Assets_1: controllers.Assets
   ) = this(errorHandler, User_2, Manager_0, Assets_1, "/")
 
@@ -45,6 +45,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.User.index"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.User.login"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.User.register"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """introduce""", """controllers.User.introduce"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """readerservice""", """controllers.User.readerService"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """create""", """controllers.Manager.createBook"""),
@@ -97,10 +98,28 @@ class Routes(
   )
 
   // @LINE:9
-  private[this] lazy val controllers_User_introduce2_route = Route("GET",
+  private[this] lazy val controllers_User_register2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("register")))
+  )
+  private[this] lazy val controllers_User_register2_invoker = createInvoker(
+    User_2.register,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.User",
+      "register",
+      Nil,
+      "GET",
+      this.prefix + """register""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:11
+  private[this] lazy val controllers_User_introduce3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("introduce")))
   )
-  private[this] lazy val controllers_User_introduce2_invoker = createInvoker(
+  private[this] lazy val controllers_User_introduce3_invoker = createInvoker(
     User_2.introduce,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -114,11 +133,11 @@ class Routes(
     )
   )
 
-  // @LINE:11
-  private[this] lazy val controllers_User_readerService3_route = Route("GET",
+  // @LINE:13
+  private[this] lazy val controllers_User_readerService4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("readerservice")))
   )
-  private[this] lazy val controllers_User_readerService3_invoker = createInvoker(
+  private[this] lazy val controllers_User_readerService4_invoker = createInvoker(
     User_2.readerService,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -132,11 +151,11 @@ class Routes(
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_Manager_createBook4_route = Route("GET",
+  // @LINE:15
+  private[this] lazy val controllers_Manager_createBook5_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("create")))
   )
-  private[this] lazy val controllers_Manager_createBook4_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_createBook5_invoker = createInvoker(
     Manager_0.createBook,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -150,11 +169,11 @@ class Routes(
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_Manager_uploadBook5_route = Route("POST",
+  // @LINE:17
+  private[this] lazy val controllers_Manager_uploadBook6_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
   )
-  private[this] lazy val controllers_Manager_uploadBook5_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_uploadBook6_invoker = createInvoker(
     Manager_0.uploadBook,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -168,11 +187,11 @@ class Routes(
     )
   )
 
-  // @LINE:17
-  private[this] lazy val controllers_Manager_deleteBook6_route = Route("GET",
+  // @LINE:19
+  private[this] lazy val controllers_Manager_deleteBook7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("delete")))
   )
-  private[this] lazy val controllers_Manager_deleteBook6_invoker = createInvoker(
+  private[this] lazy val controllers_Manager_deleteBook7_invoker = createInvoker(
     Manager_0.deleteBook,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -186,11 +205,11 @@ class Routes(
     )
   )
 
-  // @LINE:19
-  private[this] lazy val controllers_User_borrow7_route = Route("GET",
+  // @LINE:21
+  private[this] lazy val controllers_User_borrow8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("borrow")))
   )
-  private[this] lazy val controllers_User_borrow7_invoker = createInvoker(
+  private[this] lazy val controllers_User_borrow8_invoker = createInvoker(
     User_2.borrow,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -204,11 +223,11 @@ class Routes(
     )
   )
 
-  // @LINE:21
-  private[this] lazy val controllers_User_test8_route = Route("GET",
+  // @LINE:23
+  private[this] lazy val controllers_User_test9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("test")))
   )
-  private[this] lazy val controllers_User_test8_invoker = createInvoker(
+  private[this] lazy val controllers_User_test9_invoker = createInvoker(
     User_2.test,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -222,11 +241,11 @@ class Routes(
     )
   )
 
-  // @LINE:24
-  private[this] lazy val controllers_Assets_at9_route = Route("GET",
+  // @LINE:26
+  private[this] lazy val controllers_Assets_at10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at10_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -256,51 +275,57 @@ class Routes(
       }
   
     // @LINE:9
-    case controllers_User_introduce2_route(params@_) =>
+    case controllers_User_register2_route(params@_) =>
       call { 
-        controllers_User_introduce2_invoker.call(User_2.introduce)
+        controllers_User_register2_invoker.call(User_2.register)
       }
   
     // @LINE:11
-    case controllers_User_readerService3_route(params@_) =>
+    case controllers_User_introduce3_route(params@_) =>
       call { 
-        controllers_User_readerService3_invoker.call(User_2.readerService)
+        controllers_User_introduce3_invoker.call(User_2.introduce)
       }
   
     // @LINE:13
-    case controllers_Manager_createBook4_route(params@_) =>
+    case controllers_User_readerService4_route(params@_) =>
       call { 
-        controllers_Manager_createBook4_invoker.call(Manager_0.createBook)
+        controllers_User_readerService4_invoker.call(User_2.readerService)
       }
   
     // @LINE:15
-    case controllers_Manager_uploadBook5_route(params@_) =>
+    case controllers_Manager_createBook5_route(params@_) =>
       call { 
-        controllers_Manager_uploadBook5_invoker.call(Manager_0.uploadBook)
+        controllers_Manager_createBook5_invoker.call(Manager_0.createBook)
       }
   
     // @LINE:17
-    case controllers_Manager_deleteBook6_route(params@_) =>
+    case controllers_Manager_uploadBook6_route(params@_) =>
       call { 
-        controllers_Manager_deleteBook6_invoker.call(Manager_0.deleteBook)
+        controllers_Manager_uploadBook6_invoker.call(Manager_0.uploadBook)
       }
   
     // @LINE:19
-    case controllers_User_borrow7_route(params@_) =>
+    case controllers_Manager_deleteBook7_route(params@_) =>
       call { 
-        controllers_User_borrow7_invoker.call(User_2.borrow)
+        controllers_Manager_deleteBook7_invoker.call(Manager_0.deleteBook)
       }
   
     // @LINE:21
-    case controllers_User_test8_route(params@_) =>
+    case controllers_User_borrow8_route(params@_) =>
       call { 
-        controllers_User_test8_invoker.call(User_2.test)
+        controllers_User_borrow8_invoker.call(User_2.borrow)
       }
   
-    // @LINE:24
-    case controllers_Assets_at9_route(params@_) =>
+    // @LINE:23
+    case controllers_User_test9_route(params@_) =>
+      call { 
+        controllers_User_test9_invoker.call(User_2.test)
+      }
+  
+    // @LINE:26
+    case controllers_Assets_at10_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at9_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at10_invoker.call(Assets_1.at(path, file))
       }
   }
 }

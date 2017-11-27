@@ -33,5 +33,6 @@ case class User(uid: Int,
                 nickname: String,
                 sex: String,
                 permission: Int,
-                signature: String
+                signature: String,
+                avatar: String
                )

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/fan/sbtProject/Library Manager/conf/routes
-// @DATE:Mon Nov 27 10:19:27 CST 2017
+// @DATE:Mon Nov 27 16:40:39 CST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:24
+  // @LINE:26
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:26
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -31,7 +31,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:13
+  // @LINE:15
   class ReverseManager(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +39,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:15
     def createBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.createBook",
       """
@@ -49,7 +49,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:19
     def deleteBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.deleteBook",
       """
@@ -59,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:17
     def uploadBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.uploadBook",
       """
@@ -79,7 +79,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:13
     def readerService: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.readerService",
       """
@@ -89,7 +89,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:23
     def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.test",
       """
@@ -99,7 +99,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:9
+    def register: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.User.register",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "register"})
+        }
+      """
+    )
+  
+    // @LINE:21
     def borrow: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.borrow",
       """
@@ -109,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:11
     def introduce: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.introduce",
       """

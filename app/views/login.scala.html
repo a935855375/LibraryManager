@@ -1,1 +1,66 @@
 @()
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        @head("登录")
+            <!----font-Awesome----->
+        <script>
+                $(document).ready(function () {
+                    $(".dropdown").hover(
+                            function () {
+                                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                                $(this).toggleClass('open');
+                            },
+                            function () {
+                                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                                $(this).toggleClass('open');
+                            }
+                    );
+                });
+        </script>
+    </head>
+    <body>
+        @top()
+            <!-- banner -->
+        <div class="courses_banner">
+            <div class="container">
+                <h3>登录</h3>
+                <p class="description">
+                    One of the most interesting places to learn is the library. There are a lot of professional books in the
+                    library, which can enrich your professional knowledge. When you confused professional, you can look at the
+                    same professional people who understand and recognize it.
+                </p>
+                <div class="breadcrumb1">
+                    <ul>
+                        <li class="icon6"><a href="@routes.User.index()">首页</a></li>
+                        <li class="current-page">登录</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!-- //banner -->
+        <div class="courses_box1">
+            <div class="container">
+                <form class="login">
+                    <p class="lead">Welcome Back!</p>
+                    <div class="form-group">
+                        <input autocomplete="off" type="text" name="log_username" class="required form-control"
+                        placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" type="password" class="password required form-control" placeholder="密码"
+                        name="log_password">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="remember" value="true"> 记住我
+                        <input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Login">
+                    </div>
+                    <p>还没有注册账户吗？<a href="@routes.User.register()" title="Sign Up">注册</a></p>
+                </form>
+            </div>
+        </div>
+
+        @footer()
+    </body>
+</html>

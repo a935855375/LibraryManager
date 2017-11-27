@@ -6,6 +6,8 @@ GET         /                     controllers.User.index
 
 GET         /login                controllers.User.login
 
+GET         /register             controllers.User.register
+
 GET         /introduce            controllers.User.introduce
 
 GET         /readerservice        controllers.User.readerService

@@ -15,25 +15,17 @@ class MongoDB @Inject()(reactiveMongoApi: ReactiveMongoApi)(implicit ec: Executi
 
   def userCol = reactiveMongoApi.database.map(_.collection[JSONCollection]("user"))
 
-  def bookIncrement(sequenceName: String) = bookCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
-    Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
-    .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
+  def getNextSequence(col: String) = {
+    reactiveMongoApi.database.map(_.collection[JSONCollection](col)).map(_.findAndUpdate(Json.obj("_id" -> "productid"),
+      Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
+      .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
+  }
 
-  def userIncrement(sequenceName: String) = userCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
-    Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
-    .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
 
   def preOrderCol = reactiveMongoApi.database.map(_.collection[JSONCollection]("preorder"))
 
-  def preOrderIncrement(sequenceName: String) = preOrderCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
-    Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
-    .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
-
   def orderCol = reactiveMongoApi.database.map(_.collection[JSONCollection]("order"))
 
-  def orderIncrement(sequenceName: String) = preOrderCol.map(_.findAndUpdate(Json.obj("_id" -> sequenceName),
-    Json.obj("$inc" -> Json.obj("sequence_value" -> 1)), fetchNewObject = true))
-    .flatMap(_.map(_.result[JsValue])).map(_.get.\("sequence_value").as[Int])
 
   def getABook(id: Int) = {
     bookCol.flatMap(_.find(Json.obj("id" -> id)).requireOne[Book])

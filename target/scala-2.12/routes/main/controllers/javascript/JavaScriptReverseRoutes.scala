@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/fan/sbtProject/Library Manager/conf/routes
-// @DATE:Mon Nov 27 16:40:39 CST 2017
+// @DATE:Tue Nov 28 17:17:25 CST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.controllers.Assets.Asset
 // @LINE:5
 package controllers.javascript {
 
-  // @LINE:26
+  // @LINE:30
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:26
+    // @LINE:30
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -31,7 +31,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:15
+  // @LINE:19
   class ReverseManager(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -39,7 +39,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:19
     def createBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.createBook",
       """
@@ -49,7 +49,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:23
     def deleteBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.deleteBook",
       """
@@ -59,7 +59,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
+    // @LINE:21
     def uploadBook: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Manager.uploadBook",
       """
@@ -79,7 +79,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:17
     def readerService: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.readerService",
       """
@@ -89,7 +89,27 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:9
+    def doLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.User.doLogin",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "doLogin"})
+        }
+      """
+    )
+  
+    // @LINE:13
+    def doRegister: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.User.doRegister",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "doRegister"})
+        }
+      """
+    )
+  
+    // @LINE:27
     def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.test",
       """
@@ -99,7 +119,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:11
     def register: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.register",
       """
@@ -109,7 +129,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:25
     def borrow: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.borrow",
       """
@@ -119,7 +139,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:15
     def introduce: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.User.introduce",
       """

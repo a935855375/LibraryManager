@@ -2,13 +2,17 @@ package controllers
 
 import javax.inject.{Inject, Singleton}
 
-import models.MongoDB
+import models.{MongoDB, UserBean}
+import play.api.data.Form
+import play.api.data.Forms.{tuple, _}
 import play.api.libs.json._
 import play.api.mvc.{MessagesAbstractController, MessagesControllerComponents}
 import reactivemongo.play.json._
 import services.{CommonService, MailerService}
 
 import scala.concurrent.{ExecutionContext, Future}
+import scala.util.Random
+import models.JsonFormats._
 
 @Singleton
 class User @Inject()(cc: MessagesControllerComponents,
@@ -28,20 +32,59 @@ class User @Inject()(cc: MessagesControllerComponents,
     Future.successful(Ok(views.html.index()))
   }
 
-  def introduce = Action.async { implicit request =>
-    Future.successful(Ok(views.html.common.introduce()))
-  }
-
   def readerService = Action.async { implicit request =>
     Future.successful(Ok(views.html.common.readerService()))
+  }
+
+  def introduce = Action.async { implicit request =>
+    Future.successful(Ok(views.html.common.introduce()))
   }
 
   def register = Action.async { implicit request =>
     Future.successful(Ok(views.html.register()))
   }
 
-  def doRegister = {
+  def doRegister() = Action.async { implicit request =>
+    Form(tuple("nickname" -> nonEmptyText, "mail" -> nonEmptyText, "password" -> nonEmptyText, "repassword" -> nonEmptyText)).bindFromRequest.fold(
+      _ => Future.successful(Ok(Json.obj("valid" -> "0", "cause" -> "请把表单填写完整")).as(JSON)),
+      tuple => {
+        val (nickname, mail, password, repassword) = tuple
+        mongoDB.userCol.flatMap(_.find(Json.obj("mail" -> mail)).one[UserBean]).flatMap {
+          case Some(_) => Future.successful(Ok(Json.obj("valid" -> "0", "cause" -> "注册出错,您已注册过了!")).as(JSON))
+          case None => if (password.equals(repassword)) {
+            val activeCode = (1 to 8).map(_ => Random.nextInt(10).toString).mkString
+            for {
+              uid <- mongoDB.getNextSequence("book")
+              rs <- mongoDB.userCol.flatMap(_.insert(UserBean(uid, mail, password, None, None, None, None, nickname, None, 60, None, "/assets/image/head.png", Some(activeCode))))
+            } yield {
+              if (rs.ok && rs.n == 1) {
+                mailer.sendEmail(nickname, mail, views.html.mail.activeMail(nickname, activeCode).body)
+                Ok(Json.obj("valid" -> 1)).as(JSON)
+              } else {
+                Ok(Json.obj("valid" -> "0", "cause" -> "注册出错,很抱歉,系统出现了一些问题!")).as(JSON)
+              }
+            }
+          } else {
+            Future.successful(Ok(Json.obj("valid" -> "0", "cause" -> "注册出错,您两次密码输入不一致!")).as(JSON))
+          }
+        }
+      }
+    )
+  }
 
+  def doLogin() = Action.async(parse.json) { implicit request =>
+    val mail = request.body.\("mail").as[String]
+    val password = request.body.\("password").as[String]
+    if (mail.nonEmpty && password.nonEmpty)
+      mongoDB.userCol.flatMap(_.find(Json.obj("mail" -> mail)).one[JsValue]) map {
+        case None => Ok(Json.obj("valid" -> "0", "cause" -> "输入的邮箱不存在")) as JSON
+        case Some(value) => if (value.\("password").as[String].equals(password))
+          Ok(Json.obj("valid" -> "1")) as JSON
+        else
+          Ok(Json.obj("valid" -> "0", "cause" -> "密码错误")).as(JSON)
+      }
+    else
+      Future.successful(Ok(Json.obj("valid" -> "0", "cause" -> "账号密码不能为空")).as(JSON))
   }
 
   def login = Action.async { implicit request =>

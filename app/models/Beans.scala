@@ -23,16 +23,17 @@ case class PreOrderBook(pid: Int,
 
 case class PreOrder(uid: Int, book: List[PreOrderBook])
 
-case class User(uid: Int,
-                mail: String,
-                password: String,
-                realname: String,
-                grade: String,
-                tel: String,
-                qq: String,
-                nickname: String,
-                sex: String,
-                permission: Int,
-                signature: String,
-                avatar: String
-               )
+case class UserBean(uid: Int,
+                    mail: String,
+                    password: String,
+                    realname: Option[String],
+                    grade: Option[String],
+                    tel: Option[String],
+                    qq: Option[String],
+                    nickname: String,
+                    sex: Option[String],
+                    permission: Int,
+                    signature: Option[String],
+                    avatar: String,
+                    activecode: Option[String]
+                   )

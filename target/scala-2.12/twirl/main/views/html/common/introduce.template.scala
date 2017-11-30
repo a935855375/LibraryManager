@@ -23,8 +23,7 @@ object introduce extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.
       {
 
 
-Seq[Any](format.raw/*1.4*/("""
-"""))
+Seq[Any]()
       }
     }
   }
@@ -40,11 +39,11 @@ Seq[Any](format.raw/*1.4*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 27 16:54:27 CST 2017
+                  DATE: Mon Nov 27 16:57:35 CST 2017
                   SOURCE: /home/fan/sbtProject/Library Manager/app/views/common/introduce.scala.html
-                  HASH: 6bfd8486b63511c30d3793e9c211ccd2c44c6893
-                  MATRIX: 733->1|829->3
-                  LINES: 21->1|26->1
+                  HASH: ed540598523d74811ea49d48e1189053d48aed6a
+                  MATRIX: 733->1
+                  LINES: 21->1
                   -- GENERATED --
               */
           

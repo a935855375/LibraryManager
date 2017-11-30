@@ -17,7 +17,7 @@ class Manager @Inject()(cc: MessagesControllerComponents, mongoDB: MongoDB)
   // 创建一本书
   def createBook = Action.async { implicit request =>
     for {
-      auto <- mongoDB.bookIncrement("productid")
+      auto <- mongoDB.getNextSequence("book")
       result <- mongoDB.bookCol.flatMap(_.insert(Json.obj("id" -> auto,
         "name" -> "贤者的智慧",
         "sdesc" -> "无",

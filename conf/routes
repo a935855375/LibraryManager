@@ -6,7 +6,11 @@ GET         /                     controllers.User.index
 
 GET         /login                controllers.User.login
 
+POST        /doLogin              controllers.User.doLogin()
+
 GET         /register             controllers.User.register
+
+POST        /doRegister           controllers.User.doRegister()
 
 GET         /introduce            controllers.User.introduce
 

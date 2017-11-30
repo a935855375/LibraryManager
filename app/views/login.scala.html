@@ -4,21 +4,20 @@
 <html>
     <head>
         @head("登录")
-            <!----font-Awesome----->
-        <script>
-                $(document).ready(function () {
-                    $(".dropdown").hover(
-                            function () {
-                                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                                $(this).toggleClass('open');
-                            },
-                            function () {
-                                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                                $(this).toggleClass('open');
-                            }
-                    );
-                });
-        </script>
+    <script>
+            $(document).ready(function () {
+                $(".dropdown").hover(
+                        function () {
+                            $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                            $(this).toggleClass('open');
+                        },
+                        function () {
+                            $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                            $(this).toggleClass('open');
+                        }
+                );
+            });
+    </script>
     </head>
     <body>
         @top()
@@ -45,22 +44,49 @@
                 <form class="login">
                     <p class="lead">Welcome Back!</p>
                     <div class="form-group">
-                        <input autocomplete="off" type="text" name="log_username" class="required form-control"
-                        placeholder="用户名">
+                        <input autocomplete="off" type="text" name="username" class="required form-control" id="mail"
+                        placeholder="邮箱">
                     </div>
                     <div class="form-group">
-                        <input autocomplete="off" type="password" class="password required form-control" placeholder="密码"
-                        name="log_password">
+                        <input autocomplete="off" type="password" class="password required form-control" placeholder="密码" id="password"
+                        name="password">
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="remember" value="true"> 记住我
-                        <input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Login">
+                        <input type="button" class="btn btn-primary btn-lg1 btn-block" onclick="commit()" value="登录">
                     </div>
                     <p>还没有注册账户吗？<a href="@routes.User.register()" title="Sign Up">注册</a></p>
                 </form>
             </div>
         </div>
-
         @footer()
     </body>
+
+    <script>
+            var $mail = $('#mail');
+            var $password = $('#password');
+
+            function commit() {
+                $.ajax({
+                    url: "@routes.User.doLogin()",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        mail: $mail.val(),
+                        password: $password.val()
+                    }),
+                    dataType: "json",
+                    type: "POST",
+                    success: function (data) {
+                        var ok = data.valid;
+                        if (ok === 0)
+                            alert('登录成功');
+                        else
+                            alert(data.cause)
+                    },
+                    error: function () {
+                        alert('sorry, 未能连接至服务器')
+                    }
+                })
+            }
+    </script>
 </html>
